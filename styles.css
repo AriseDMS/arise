@@ -1,43 +1,43 @@
-/* Global Styles */
+:root {
+  --color-white: rgb(225, 225, 225);
+  --color-black: rgb(25, 25, 25);
+  --color-red: rgb(255, 0, 0);
+  --border-blue: 1px solid rgb(0, 0, 255);
+  --border-red: 1px solid rgb(255, 0, 0);
+  --border-green: 1px solid rgb(72, 255, 0);
+  --border-radius-buttons: 10px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--color-white);
 }
-
-/* :root {
-  --font-color-black: rgb(225, 225, 225);
-  --font-color-white: rgb(25, 25, 25);
-} */
 
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-  display: block;
-  min-height: 100%;
-  min-width: 100%;
-}
-
-#template_image {
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: -999;
+  height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   pointer-events: none;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -50,115 +50,116 @@ ul {
 }
 
 button {
-  background-color: transparent;
   display: block;
-  border: none;
-  color: transparent;
   cursor: pointer;
-  opacity: 0;
   outline: none;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent; /* for iOS Safari */
-  tap-highlight-color: transparent; /* for Android Chrome and other Android browsers */
+  border: none;
 }
 
-button:active {
-  background-color: transparent;
-  outline: none;
+/* ************************************************************************ */
+
+header {
+  padding-top: 20px;
+  padding-bottom: 200px;
+  /* border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%; */
+  background-image: url(Assets/Black_BG.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-button:focus {
-  outline: none;
-  background-color: transparent;
-}
-
-/* ****************************************************************************** */
-
-nav {
+header div:first-child {
+  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: flex-end;
-  height: 11.5vw;
-  margin-right: 5.6%;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-nav button {
-  margin-left: 2%;
-  height: 20%;
+#main_Logo {
+  width: 350px;
+}
+nav {
+  margin: 20px 0;
+}
+nav a {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
 }
 
-#Inquire {
-  width: 6.8%;
+nav .navigation_Buttons:last-child {
+  background-color: var(--color-red);
+  border-radius: var(--border-radius-buttons);
 }
 
-#Contact_Us {
-  width: 8.8%;
+nav a:hover {
+  background-color: var(--color-red);
 }
 
-#Pricing {
-  width: 5%;
-}
+/* ************************************************** */
 
-#Services {
-  width: 6.5%;
-}
-
-#Portfolio {
-  width: 6.5%;
-}
-
-#About_Us {
-  width: 7%;
-}
-
-#Home {
-  width: 4.5%;
-}
-
-/* ****************************************************************************** */
-
-main {
-  width: 0 auto;
-  height: 30vw;
+#introduction {
+  margin: 50px 0;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 1.2%;
-  margin-left: 5.5%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-main div {
+#introduction div:first-child {
   display: block;
-  width: 13vw;
-  height: 3vw;
-  margin-bottom: 0.5%;
+  padding: 1em;
+  max-width: 800px;
+  text-align: left;
 }
 
-main div button {
-  width: 100%;
+#introduction div:nth-child(2) {
+  margin: 50px 0;
+  max-width: 500px;
   height: 100%;
 }
 
-/* ****************************************************************************** */
-#Learn_More_DIV {
-  width: 0 auto;
-  height: 89vw;
+#introduction h2:first-child {
+  font-size: 3em;
+}
+
+#introduction h2 span {
+  color: var(--color-red);
+}
+
+#main_Buttons {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  margin-left: 5%;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-#Learn_More_DIV div {
-  width: 13vw;
-  height: 6%;
+#main_Buttons button {
+  font-size: 1.3em;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: var(--border-radius-buttons);
 }
 
-#Learn_More {
-  width: 100%;
-  height: 100%;
+#main_Buttons button:first-child {
+  background-color: var(--color-red);
+}
+
+#main_Buttons button:last-child {
+  background-color: transparent;
+  border: var(--border-red);
+}
+
+#introduction h2:nth-child(2) {
+  font-size: 7em;
+}
+
+#introduction p {
+  margin-top: 20px;
+  font-size: 1.5em;
 }
