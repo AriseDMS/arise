@@ -58,8 +58,13 @@ button {
 }
 
 button:active {
-  background-color: transparent; /* Set the background color to transparent on click */
-  outline: none; /* Remove any focus outline if present (for accessibility) */
+  background-color: transparent;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  background-color: transparent;
 }
 
 /* ****************************************************************************** */
