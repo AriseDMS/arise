@@ -59,6 +59,8 @@ button {
   outline: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent; /* for iOS Safari */
+  tap-highlight-color: transparent; /* for Android Chrome and other Android browsers */
 }
 
 button:active {
