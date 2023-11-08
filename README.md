@@ -1,3 +1,3 @@
 # arise
 
-https://nepoaquino.github.io/arise/
+https://arisedms.github.io/arise/
