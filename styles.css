@@ -54,7 +54,12 @@ button {
   border: none;
   color: transparent;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0;
+}
+
+button:active {
+  background-color: transparent; /* Set the background color to transparent on click */
+  outline: none; /* Remove any focus outline if present (for accessibility) */
 }
 
 /* ****************************************************************************** */
@@ -128,9 +133,8 @@ main div button {
 
 /* ****************************************************************************** */
 #Learn_More_DIV {
-  border: 0.1px solid red;
   width: 0 auto;
-  height: 90vw;
+  height: 89vw;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -140,7 +144,7 @@ main div button {
 
 #Learn_More_DIV div {
   width: 13vw;
-  height: 3vw;
+  height: 6%;
 }
 
 #Learn_More {
