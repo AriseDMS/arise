@@ -9,11 +9,16 @@
   </head>
   <body>
     <header>
-      <div>
+      <div id="logo_Container">
         <div id="main_Logo">
           <a href="#">
-            <img src="Assets/Arise_logo_v2.png" alt="Arise Logo"
-          /></a>
+            <img src="Assets/Arise_logo_v2.png" alt="Arise Logo" />
+          </a>
+        </div>
+        <div id="menu-toggle" class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
         <nav>
           <a href="#" class="navigation_Buttons">Home</a>
@@ -52,6 +57,13 @@
     <div></div>
 
     <footer></footer>
-    <!-- <script src="script.js"></script> -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

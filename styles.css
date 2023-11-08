@@ -2,6 +2,7 @@
   --color-white: rgb(225, 225, 225);
   --color-black: rgb(25, 25, 25);
   --color-red: rgb(255, 0, 0);
+  --border-white: 1px solid rgb(255, 255, 255);
   --border-blue: 1px solid rgb(0, 0, 255);
   --border-red: 1px solid rgb(255, 0, 0);
   --border-green: 1px solid rgb(72, 255, 0);
@@ -42,6 +43,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--color-white);
 }
 
 ol,
@@ -59,28 +61,25 @@ button {
 /* ************************************************************************ */
 
 header {
-  padding-top: 20px;
-  padding-bottom: 200px;
-  /* border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%; */
   background-image: url(Assets/Black_BG.png);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 0% 0% 60% 60% / 0% 0% 25% 25%;
+  overflow: hidden;
 }
 
-header div:first-child {
+#logo_Container {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   text-align: center;
 }
 
 #main_Logo {
-  width: 350px;
+  width: 20em;
 }
 nav {
   margin: 20px 0;
@@ -100,6 +99,24 @@ nav .navigation_Buttons:last-child {
 nav a:hover {
   background-color: var(--color-red);
 }
+
+/* Add the following CSS for the hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 5px;
+  margin: 3px 0;
+  border: var(--border-white);
+  background-color: var(--color-white);
+}
+
+/* Add media query styles for larger screens if needed */
 
 /* ************************************************** */
 
@@ -135,6 +152,7 @@ nav a:hover {
 
 #main_Buttons {
   display: flex;
+  flex-direction: row;
   gap: 20px;
   margin-top: 20px;
 }
@@ -162,4 +180,44 @@ nav a:hover {
 #introduction p {
   margin-top: 20px;
   font-size: 1.5em;
+}
+
+@media (max-width: 1200px) {
+  #logo_Container {
+    justify-content: space-between;
+  }
+  #introduction {
+    align-items: center;
+    justify-content: center;
+  }
+  #introduction div:first-child {
+    text-align: center;
+  }
+  #main_Buttons {
+    justify-content: center;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  nav {
+    background: rgba(25, 25, 25, 0.9); /* 0.7 is the alpha (opacity) value */
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 4.5em;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+  }
 }
