@@ -55,6 +55,7 @@ button {
   color: transparent;
   cursor: pointer;
   opacity: 0;
+  outline: none;
   -webkit-user-select: none;
   user-select: none;
 }
