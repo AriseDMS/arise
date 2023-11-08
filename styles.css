@@ -50,6 +50,7 @@ ul {
 }
 
 button {
+  background-color: transparent;
   display: block;
   border: none;
   color: transparent;
