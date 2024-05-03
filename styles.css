@@ -7,6 +7,10 @@ body {
   padding-top: 56px;
 }
 
+#navigation {
+  padding: 0 90px 0 60px;
+}
+
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
@@ -24,6 +28,9 @@ body {
   .offcanvas-collapse.open {
     visibility: visible;
     transform: translateX(-100%);
+  }
+  #navigation {
+    padding: 0 45px 0 30px;
   }
 }
 
